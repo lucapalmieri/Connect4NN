@@ -324,6 +324,9 @@ class Controller:
                             self.neuralNetworkAI_nonDeterministic_turn(board, PLAYER_2_PIECE, False)
                         n_moves += 1
 
+                    if self.game.winning_move(board, PLAYER_2_PIECE):
+                        result = 2
+                        game_over = True
             else:
                 result = 0
                 game_over = True
